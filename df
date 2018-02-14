@@ -1,0 +1,342 @@
+[33mcommit 048ffbda3a00144dc5ca6b795fbc8dbf5b243e8c[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: DennisG53 <35806532+DennisG53@users.noreply.github.com>
+Date:   Thu Feb 8 08:25:11 2018 -0600
+
+    Add files via upload
+    
+    Laboratorio 08/02
+
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2.sln b/1016417_1071317/Lab1.2/Lab1.2.sln[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3836244[m
+[1m--- /dev/null[m
+[1m+++ b/1016417_1071317/Lab1.2/Lab1.2.sln[m
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32m﻿[m[41m[m
+[32m+[m[32mMicrosoft Visual Studio Solution File, Format Version 12.00[m[41m[m
+[32m+[m[32m# Visual Studio 14[m[41m[m
+[32m+[m[32mVisualStudioVersion = 14.0.25420.1[m[41m[m
+[32m+[m[32mMinimumVisualStudioVersion = 10.0.40219.1[m[41m[m
+[32m+[m[32mProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1.2", "Lab1.2\Lab1.2.csproj", "{C79B9A95-25F4-4030-B4DA-0203D48F4EA5}"[m[41m[m
+[32m+[m[32mEndProject[m[41m[m
+[32m+[m[32mGlobal[m[41m[m
+[32m+[m	[32mGlobalSection(SolutionConfigurationPlatforms) = preSolution[m[41m[m
+[32m+[m		[32mDebug|Any CPU = Debug|Any CPU[m[41m[m
+[32m+[m		[32mRelease|Any CPU = Release|Any CPU[m[41m[m
+[32m+[m	[32mEndGlobalSection[m[41m[m
+[32m+[m	[32mGlobalSection(ProjectConfigurationPlatforms) = postSolution[m[41m[m
+[32m+[m		[32m{C79B9A95-25F4-4030-B4DA-0203D48F4EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU[m[41m[m
+[32m+[m		[32m{C79B9A95-25F4-4030-B4DA-0203D48F4EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU[m[41m[m
+[32m+[m		[32m{C79B9A95-25F4-4030-B4DA-0203D48F4EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU[m[41m[m
+[32m+[m		[32m{C79B9A95-25F4-4030-B4DA-0203D48F4EA5}.Release|Any CPU.Build.0 = Release|Any CPU[m[41m[m
+[32m+[m	[32mEndGlobalSection[m[41m[m
+[32m+[m	[32mGlobalSection(SolutionProperties) = preSolution[m[41m[m
+[32m+[m		[32mHideSolutionNode = FALSE[m[41m[m
+[32m+[m	[32mEndGlobalSection[m[41m[m
+[32m+[m[32mEndGlobal[m[41m[m
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/App.config b/1016417_1071317/Lab1.2/Lab1.2/App.config[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d740e88[m
+[1m--- /dev/null[m
+[1m+++ b/1016417_1071317/Lab1.2/Lab1.2/App.config[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m﻿<?xml version="1.0" encoding="utf-8" ?>[m[41m[m
+[32m+[m[32m<configuration>[m[41m[m
+[32m+[m[32m    <startup>[m[41m [m
+[32m+[m[32m        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />[m[41m[m
+[32m+[m[32m    </startup>[m[41m[m
+[32m+[m[32m</configuration>[m
+\ No newline at end of file[m
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/Lab1.2.csproj b/1016417_1071317/Lab1.2/Lab1.2/Lab1.2.csproj[m
+[1mnew file mode 100644[m
+[1mindex 0000000..08a7e0c[m
+[1m--- /dev/null[m
+[1m+++ b/1016417_1071317/Lab1.2/Lab1.2/Lab1.2.csproj[m
+[36m@@ -0,0 +1,60 @@[m
+[32m+[m[32m﻿<?xml version="1.0" encoding="utf-8"?>[m[41m[m
+[32m+[m[32m<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">[m[41m[m
+[32m+[m[32m  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />[m[41m[m
+[32m+[m[32m  <PropertyGroup>[m[41m[m
+[32m+[m[32m    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>[m[41m[m
+[32m+[m[32m    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>[m[41m[m
+[32m+[m[32m    <ProjectGuid>{C79B9A95-25F4-4030-B4DA-0203D48F4EA5}</ProjectGuid>[m[41m[m
+[32m+[m[32m    <OutputType>Exe</OutputType>[m[41m[m
+[32m+[m[32m    <AppDesignerFolder>Properties</AppDesignerFolder>[m[41m[m
+[32m+[m[32m    <RootNamespace>Lab1._2</RootNamespace>[m[41m[m
+[32m+[m[32m    <AssemblyName>Lab1.2</AssemblyName>[m[41m[m
+[32m+[m[32m    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>[m[41m[m
+[32m+[m[32m    <FileAlignment>512</FileAlignment>[m[41m[m
+[32m+[m[32m    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>[m[41m[m
+[32m+[m[32m  </PropertyGroup>[m[41m[m
+[32m+[m[32m  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">[m[41m[m
+[32m+[m[32m    <PlatformTarget>AnyCPU</PlatformTarget>[m[41m[m
+[32m+[m[32m    <DebugSymbols>true</DebugSymbols>[m[41m[m
+[32m+[m[32m    <DebugType>full</DebugType>[m[41m[m
+[32m+[m[32m    <Optimize>false</Optimize>[m[41m[m
+[32m+[m[32m    <OutputPath>bin\Debug\</OutputPath>[m[41m[m
+[32m+[m[32m    <DefineConstants>DEBUG;TRACE</DefineConstants>[m[41m[m
+[32m+[m[32m    <ErrorReport>prompt</ErrorReport>[m[41m[m
+[32m+[m[32m    <WarningLevel>4</WarningLevel>[m[41m[m
+[32m+[m[32m  </PropertyGroup>[m[41m[m
+[32m+[m[32m  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">[m[41m[m
+[32m+[m[32m    <PlatformTarget>AnyCPU</PlatformTarget>[m[41m[m
+[32m+[m[32m    <DebugType>pdbonly</DebugType>[m[41m[m
+[32m+[m[32m    <Optimize>true</Optimize>[m[41m[m
+[32m+[m[32m    <OutputPath>bin\Release\</OutputPath>[m[41m[m
+[32m+[m[32m    <DefineConstants>TRACE</DefineConstants>[m[41m[m
+[32m+[m[32m    <ErrorReport>prompt</ErrorReport>[m[41m[m
+[32m+[m[32m    <WarningLevel>4</WarningLevel>[m[41m[m
+[32m+[m[32m  </PropertyGroup>[m[41m[m
+[32m+[m[32m  <ItemGroup>[m[41m[m
+[32m+[m[32m    <Reference Include="System" />[m[41m[m
+[32m+[m[32m    <Reference Include="System.Core" />[m[41m[m
+[32m+[m[32m    <Reference Include="System.Xml.Linq" />[m[41m[m
+[32m+[m[32m    <Reference Include="System.Data.DataSetExtensions" />[m[41m[m
+[32m+[m[32m    <Reference Include="Microsoft.CSharp" />[m[41m[m
+[32m+[m[32m    <Reference Include="System.Data" />[m[41m[m
+[32m+[m[32m    <Reference Include="System.Net.Http" />[m[41m[m
+[32m+[m[32m    <Reference Include="System.Xml" />[m[41m[m
+[32m+[m[32m  </ItemGroup>[m[41m[m
+[32m+[m[32m  <ItemGroup>[m[41m[m
+[32m+[m[32m    <Compile Include="Program.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Properties\AssemblyInfo.cs" />[m[41m[m
+[32m+[m[32m  </ItemGroup>[m[41m[m
+[32m+[m[32m  <ItemGroup>[m[41m[m
+[32m+[m[32m    <None Include="App.config" />[m[41m[m
+[32m+[m[32m  </ItemGroup>[m[41m[m
+[32m+[m[32m  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />[m[41m[m
+[32m+[m[32m  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.[m[41m [m
+[32m+[m[32m       Other similar extension points exist, see Microsoft.Common.targets.[m[41m[m
+[32m+[m[32m  <Target Name="BeforeBuild">[m[41m[m
+[32m+[m[32m  </Target>[m[41m[m
+[32m+[m[32m  <Target Name="AfterBuild">[m[41m[m
+[32m+[m[32m  </Target>[m[41m[m
+[32m+[m[32m  -->[m[41m[m
+[32m+[m[32m</Project>[m
+\ No newline at end of file[m
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/Program.cs b/1016417_1071317/Lab1.2/Lab1.2/Program.cs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..079f9ec[m
+[1m--- /dev/null[m
+[1m+++ b/1016417_1071317/Lab1.2/Lab1.2/Program.cs[m
+[36m@@ -0,0 +1,112 @@[m
+[32m+[m[32m﻿using System;[m[41m[m
+[32m+[m[32musing System.Collections.Generic;[m[41m[m
+[32m+[m[32musing System.Linq;[m[41m[m
+[32m+[m[32musing System.Text;[m[41m[m
+[32m+[m[32musing System.Threading.Tasks;[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mnamespace Lab1._2[m[41m[m
+[32m+[m[32m{[m[41m[m
+[32m+[m[32m    public delegate bool DelegateComparacion(Libro libro);[m[41m[m
+[32m+[m[32m    class Program[m[41m[m
+[32m+[m[32m    {[m[41m[m
+[32m+[m[32m        static void Main(string[] args)[m[41m[m
+[32m+[m[32m        {[m[41m[m
+[32m+[m[32m            LinkedList<Libro> lista = new LinkedList<Libro>();[m[41m[m
+[32m+[m[32m            lista.AddLast(new Libro() { Id = 1, Nombre = "Don Quijote", Edicion = "Primera" });[m[41m[m
+[32m+[m[32m            lista.AddLast(new Libro() { Id = 2, Nombre = "Baldor", Edicion = "Tercera" });[m[41m[m
+[32m+[m[32m            lista.AddLast(new Libro() { Id = 3, Nombre = "Sr. Presidente", Edicion = "Segunda" });[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            //Instancia del delegado[m[41m[m
+[32m+[m[32m            DelegateComparacion delegado = new DelegateComparacion(EsPrimeraEdicion);[m[41m[m
+[32m+[m[32m            Console.WriteLine(delegado(lista.First()));[m[41m[m
+[32m+[m[32m            Console.WriteLine(delegado(lista.Last()));[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            //Delegado tipo lambda[m[41m[m
+[32m+[m[32m            //Este delegado toma a los que tienen la primera edicion[m[41m[m
+[32m+[m[32m            DelegateComparacion delegado2 = x => x.Edicion == "Primera";[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            //Delegado mezclado[m[41m[m
+[32m+[m[32m            DelegateComparacion delegado3 = x =>[m[41m[m
+[32m+[m[32m            {[m[41m[m
+[32m+[m[32m                if (x.Edicion == "Primera")[m[41m[m
+[32m+[m[32m                {[m[41m[m
+[32m+[m[32m                    return true;[m[41m[m
+[32m+[m[32m                }[m[41m[m
+[32m+[m[32m                else[m[41m[m
+[32m+[m[32m                {[m[41m[m
+[32m+[m[32m                    return false;[m[41m[m
+[32m+[m[32m                }[m[41m[m
+[32m+[m[32m            };[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            //Buscar el libro con nombre Baldor[m[41m[m
+[32m+[m[32m            //Este es el delegado[m[41m[m
+[32m+[m[32m            var result = lista.Where(libro => libro.Nombre == "Baldor").ToList();[m[41m[m
+[32m+[m[32m            //La expresión de arriba equivale *-*-*[m[41m[m
+[32m+[m[32m            var datos = lista.Where(variable => variable.Id == 1);[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            //************ JUGADORES[m[41m[m
+[32m+[m[32m            //var resultSalario = lista.Where(x => x.precio > 200 );[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            //**********Eliminar JUGADORES[m[41m[m
+[32m+[m[32m            //Libro paraEliminar = lista.Where(variable => variable.Id == 1).First();[m[41m[m
+[32m+[m[32m            //lista.Remove(paraEliminar);[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            var Bisiestos = lista.Where(x =>[m[41m[m
+[32m+[m[32m            {[m[41m[m
+[32m+[m[32m                if (x.Anio == 2017)[m[41m[m
+[32m+[m[32m                {[m[41m[m
+[32m+[m[32m                    return true;[m[41m[m
+[32m+[m[32m                }[m[41m[m
+[32m+[m[32m                else[m[41m[m
+[32m+[m[32m                {[m[41m[m
+[32m+[m[32m                    return false;[m[41m[m
+[32m+[m[32m                }[m[41m[m
+[32m+[m[32m            });[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            Console.WriteLine("Result");[m[41m[m
+[32m+[m[32m            foreach (var item in result)[m[41m[m
+[32m+[m[32m            {[m[41m[m
+[32m+[m[32m                Console.WriteLine(item.Id +", " +item.Nombre + ", " + item.Edicion);[m[41m[m
+[32m+[m[32m            }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            Console.ReadKey();[m[41m[m
+[32m+[m[32m        }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m        static bool EsPrimeraEdicion(Libro libro)[m[41m[m
+[32m+[m[32m        {[m[41m[m
+[32m+[m[32m            if (libro.Edicion == "Primera")[m[41m[m
+[32m+[m[32m            {[m[41m[m
+[32m+[m[32m                return true;[m[41m[m
+[32m+[m[32m            }[m[41m[m
+[32m+[m[32m            else[m[41m[m
+[32m+[m[32m            {[m[41m[m
+[32m+[m[32m                return false;[m[41m[m
+[32m+[m[32m            }[m[41m[m
+[32m+[m[32m        }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m        //*-*-*[m[41m[m
+[32m+[m[32m        //static Libro EsBaldor(Libro libro)[m[41m[m
+[32m+[m[32m        //{[m[41m[m
+[32m+[m[32m        //    if (libro.Nombre == "Baldor")[m[41m[m
+[32m+[m[32m        //        {[m[41m[m
+[32m+[m[32m        //        return libro;[m[41m[m
+[32m+[m[32m        //    }[m[41m[m
+[32m+[m[32m        //    else[m[41m[m
+[32m+[m[32m        //    {[m[41m[m
+[32m+[m[32m        //        return null;[m[41m[m
+[32m+[m[32m        //    }[m[41m[m
+[32m+[m[32m        //}[m[41m[m
+[32m+[m[32m    }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m    public class Libro[m[41m[m
+[32m+[m[32m    {[m[41m[m
+[32m+[m[32m        public int Id { get; set; }[m[41m[m
+[32m+[m[32m        public string Nombre { get; set; }[m[41m[m
+[32m+[m[32m        public string Edicion { get; set; }[m[41m[m
+[32m+[m[32m        public int Anio { get; set; }[m[41m[m
+[32m+[m[32m        public int precio { get; set; }[m[41m[m
+[32m+[m[32m    }[m[41m[m
+[32m+[m[32m}[m[41m[m
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/Properties/AssemblyInfo.cs b/1016417_1071317/Lab1.2/Lab1.2/Properties/AssemblyInfo.cs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..53f3d50[m
+[1m--- /dev/null[m
+[1m+++ b/1016417_1071317/Lab1.2/Lab1.2/Properties/AssemblyInfo.cs[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m﻿using System.Reflection;[m[41m[m
+[32m+[m[32musing System.Runtime.CompilerServices;[m[41m[m
+[32m+[m[32musing System.Runtime.InteropServices;[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// General Information about an assembly is controlled through the following[m[41m [m
+[32m+[m[32m// set of attributes. Change these attribute values to modify the information[m[41m[m
+[32m+[m[32m// associated with an assembly.[m[41m[m
+[32m+[m[32m[assembly: AssemblyTitle("Lab1.2")][m[41m[m
+[32m+[m[32m[assembly: AssemblyDescription("")][m[41m[m
+[32m+[m[32m[assembly: AssemblyConfiguration("")][m[41m[m
+[32m+[m[32m[assembly: AssemblyCompany("")][m[41m[m
+[32m+[m[32m[assembly: AssemblyProduct("Lab1.2")][m[41m[m
+[32m+[m[32m[assembly: AssemblyCopyright("Copyright ©  2018")][m[41m[m
+[32m+[m[32m[assembly: AssemblyTrademark("")][m[41m[m
+[32m+[m[32m[assembly: AssemblyCulture("")][m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Setting ComVisible to false makes the types in this assembly not visible[m[41m [m
+[32m+[m[32m// to COM components.  If you need to access a type in this assembly from[m[41m [m
+[32m+[m[32m// COM, set the ComVisible attribute to true on that type.[m[41m[m
+[32m+[m[32m[assembly: ComVisible(false)][m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// The following GUID is for the ID of the typelib if this project is exposed to COM[m[41m[m
+[32m+[m[32m[assembly: Guid("c79b9a95-25f4-4030-b4da-0203d48f4ea5")][m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Version information for an assembly consists of the following four values:[m[41m[m
+[32m+[m[32m//[m[41m[m
+[32m+[m[32m//      Major Version[m[41m[m
+[32m+[m[32m//      Minor Version[m[41m [m
+[32m+[m[32m//      Build Number[m[41m[m
+[32m+[m[32m//      Revision[m[41m[m
+[32m+[m[32m//[m[41m[m
+[32m+[m[32m// You can specify all the values or you can default the Build and Revision Numbers[m[41m [m
+[32m+[m[32m// by using the '*' as shown below:[m[41m[m
+[32m+[m[32m// [assembly: AssemblyVersion("1.0.*")][m[41m[m
+[32m+[m[32m[assembly: AssemblyVersion("1.0.0.0")][m[41m[m
+[32m+[m[32m[assembly: AssemblyFileVersion("1.0.0.0")][m[41m[m
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.exe b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.exe[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5699cd0[m
+Binary files /dev/null and b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.exe differ
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.exe.config b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.exe.config[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d740e88[m
+[1m--- /dev/null[m
+[1m+++ b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.exe.config[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m﻿<?xml version="1.0" encoding="utf-8" ?>[m[41m[m
+[32m+[m[32m<configuration>[m[41m[m
+[32m+[m[32m    <startup>[m[41m [m
+[32m+[m[32m        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />[m[41m[m
+[32m+[m[32m    </startup>[m[41m[m
+[32m+[m[32m</configuration>[m
+\ No newline at end of file[m
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.pdb b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.pdb[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5412e43[m
+Binary files /dev/null and b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.pdb differ
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.vshost.exe b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.vshost.exe[m
+[1mnew file mode 100644[m
+[1mindex 0000000..681ab77[m
+Binary files /dev/null and b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.vshost.exe differ
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.vshost.exe.config b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.vshost.exe.config[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d740e88[m
+[1m--- /dev/null[m
+[1m+++ b/1016417_1071317/Lab1.2/Lab1.2/bin/Debug/Lab1.2.vshost.exe.config[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m﻿<?xml version="1.0" encoding="utf-8" ?>[m[41m[m
+[32m+[m[32m<configuration>[m[41m[m
+[32m+[m[32m    <startup>[m[41m [m
+[32m+[m[32m        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />[m[41m[m
+[32m+[m[32m    </startup>[m[41m[m
+[32m+[m[32m</configuration>[m
+\ No newline at end of file[m
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9a00d9e[m
+Binary files /dev/null and b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache differ
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.csproj.FileListAbsolute.txt b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.csproj.FileListAbsolute.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d91a368[m
+[1m--- /dev/null[m
+[1m+++ b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.csproj.FileListAbsolute.txt[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32mC:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\bin\Debug\Lab1.2.exe.config[m[41m[m
+[32m+[m[32mC:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\bin\Debug\Lab1.2.exe[m[41m[m
+[32m+[m[32mC:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\bin\Debug\Lab1.2.pdb[m[41m[m
+[32m+[m[32mC:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\obj\Debug\Lab1.2.csprojResolveAssemblyReference.cache[m[41m[m
+[32m+[m[32mC:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\obj\Debug\Lab1.2.exe[m[41m[m
+[32m+[m[32mC:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\obj\Debug\Lab1.2.pdb[m[41m[m
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.csprojResolveAssemblyReference.cache b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.csprojResolveAssemblyReference.cache[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dd2932a[m
+Binary files /dev/null and b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.csprojResolveAssemblyReference.cache differ
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.exe b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.exe[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5699cd0[m
+Binary files /dev/null and b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.exe differ
+[1mdiff --git a/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.pdb b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.pdb[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5412e43[m
+Binary files /dev/null and b/1016417_1071317/Lab1.2/Lab1.2/obj/Debug/Lab1.2.pdb differ
