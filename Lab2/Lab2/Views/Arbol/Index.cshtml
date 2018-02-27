@@ -1,0 +1,9 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Puto el que lo lea</h2>
+
+<h2>Contenido del puto arbol</h2>
+@Html.TextAreaFor(m => TempData["arbol"])
+<br>
+@Html.CheckBox("Si o no")
