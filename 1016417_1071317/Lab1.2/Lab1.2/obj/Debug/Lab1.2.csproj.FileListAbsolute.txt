@@ -1,6 +1,0 @@
-C:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\bin\Debug\Lab1.2.exe.config
-C:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\bin\Debug\Lab1.2.exe
-C:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\bin\Debug\Lab1.2.pdb
-C:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\obj\Debug\Lab1.2.csprojResolveAssemblyReference.cache
-C:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\obj\Debug\Lab1.2.exe
-C:\Users\denni\Documents\Repositorios\1016417_1071317\Lab1.2\Lab1.2\obj\Debug\Lab1.2.pdb
