@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "SubirArbol";
+}
+
+<h2>Subir Arbol</h2>
+
+@using (Html.BeginForm("SubirArbol", "ArbolBinario", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        <input type="file" id="dataFile" name="upload" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Upload" class="btn btn-default" />
+    </div>
+
+    @Html.TextAreaFor(m => TempData["Arbol"])
+}
+
+
+@*@Html.TextBox("Texto Busqueda")
+    <br />
+    <input type="submit"/>*@
