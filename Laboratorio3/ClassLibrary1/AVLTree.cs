@@ -44,7 +44,8 @@ namespace ClassLibrary1
 
         public class Node
         {
-            public readonly T value;
+            //public readonly T value;
+            public T value;
             Node parent;
             public Node left;
             public Node right;
@@ -60,7 +61,7 @@ namespace ClassLibrary1
             }
 
             public Node Insert(T value, CompareDelegate compare)
-            {
+            {  
                 if (compare(value, this.value) < 0)
                 {
                     return Insert(ref left, value, compare);
