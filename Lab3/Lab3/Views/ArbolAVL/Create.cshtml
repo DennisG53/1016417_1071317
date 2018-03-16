@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Crear un Árbol AVL</h2>
+
+<h3>Seleccione el campo para implementar el árbol</h3>
+
+<body>
+
+    <form action="">
+        <input type="radio" name="option" value="NoPartido"> No. Partido<br>
+        <input type="radio" name="option" value="FechaPartido"> Fecha de Partido<br>
+    </form>
+</body>
+
+<body>
+
+    <h3>Ingrese un archivo con formato Json</h3>
+
+@*    <input type="file" id="myFile">
+
+    <button onclick="myFunction()">Ingresar</button>
+
+    <script>
+function myFunction() {
+    var x = document.getElementById("myFile");
+    x.disabled = true;
+}
+    </script>
+
+</body>*@
+
+@using (Html.BeginForm("Create", "ArbolAVL", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="file" />
+    <input type="submit" value="OK" />
+}
