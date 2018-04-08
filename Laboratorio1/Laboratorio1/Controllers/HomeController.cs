@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LibreriaLab1;
 
 namespace Laboratorio1.Controllers
 {
@@ -36,10 +37,23 @@ namespace Laboratorio1.Controllers
                     {
                         Stream stream = upload.InputStream;
                         DataTable csvTable = new DataTable();
-                        using (CsvReader csvReader =
-                            new CsvReader(new StreamReader(stream), true))
+                        using (CsvReader csvReader = new CsvReader(new StreamReader(stream), true))
                         {
                             csvTable.Load(csvReader);
+                        }
+
+                        ListaDoblementeEnlazada Lista = new ListaDoblementeEnlazada();
+
+                        foreach (DataRow row in csvTable.Rows.Cast<DataRow>().Skip(1))
+                        {
+                            Jugador nuevoJugador = new Jugador();
+                            nuevoJugador.Club = row[csvTable.Columns[0]].ToString();
+                            nuevoJugador.Apellido = row[csvTable.Columns[1]].ToString();
+                            nuevoJugador.Nombre = row[csvTable.Columns[2]].ToString();
+                            nuevoJugador.Posicion = row[csvTable.Columns[3]].ToString();
+                            nuevoJugador.Salario = double.Parse(row[csvTable.Columns[4]].ToString());
+                            nuevoJugador.Compensacion = double.Parse(row[csvTable.Columns[5]].ToString());
+                            Lista.InsertarFinal(nuevoJugador);
                         }
                         return View(csvTable);
                     }

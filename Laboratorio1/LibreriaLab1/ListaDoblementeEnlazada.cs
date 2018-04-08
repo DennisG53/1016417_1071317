@@ -6,31 +6,31 @@ using System.Threading.Tasks;
 
 namespace LibreriaLab1
 {
-    public struct Data
+    public class Jugador
     {
         public string Club { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Posicion { get; set; }
-        public string Salario { get; set; }
-        public string Compensacion { get; set; }
+        public double Salario { get; set; }
+        public double Compensacion { get; set; }
 
     }
 
     public class Nodo
     {
-        public Data info;
+        public Jugador jugador;
         public Nodo siguiente;
         public Nodo anterior;
 
-        public Nodo(Data Valor, Nodo Siguiente, Nodo Anterior)
+        public Nodo(Jugador Valor, Nodo Siguiente, Nodo Anterior)
         {
-            this.info = Valor;
+            this.jugador = Valor;
             this.siguiente = Siguiente;
             this.anterior = Anterior;
         }
 
-        public Nodo(Data valor) : this(valor, null, null) { }
+        public Nodo(Jugador valor) : this(valor, null, null) { }
     }
 
     public class ListaDoblementeEnlazada
@@ -59,7 +59,7 @@ namespace LibreriaLab1
             return tempNodo;
         }
 
-        public void InsertarInicio(Data dtInfo)
+        public void InsertarInicio(Jugador dtInfo)
         {
             Nodo nNuevo = new Nodo(dtInfo, null, null);
 
@@ -75,7 +75,7 @@ namespace LibreriaLab1
             }
         }
 
-        public void InsertarFinal(Data dtInfo)
+        public void InsertarFinal(Jugador dtInfo)
         {
             Nodo nNuevo = new Nodo(dtInfo, null, null);
 
