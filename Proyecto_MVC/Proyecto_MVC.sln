@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto_MVC", "Proyecto_MVC\Proyecto_MVC.csproj", "{1333E312-89E6-4266-A6D8-BE2C835DA2D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaProyectoEDD", "ClassLibrary1\LibreriaProyectoEDD.csproj", "{60051170-1BB3-411A-B411-DAAB17CA7B41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1333E312-89E6-4266-A6D8-BE2C835DA2D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1333E312-89E6-4266-A6D8-BE2C835DA2D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1333E312-89E6-4266-A6D8-BE2C835DA2D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1333E312-89E6-4266-A6D8-BE2C835DA2D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60051170-1BB3-411A-B411-DAAB17CA7B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60051170-1BB3-411A-B411-DAAB17CA7B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60051170-1BB3-411A-B411-DAAB17CA7B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60051170-1BB3-411A-B411-DAAB17CA7B41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
