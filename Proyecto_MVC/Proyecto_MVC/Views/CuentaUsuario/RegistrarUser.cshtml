@@ -1,0 +1,37 @@
+﻿@model Proyecto_MVC.Models.CuentaUsuario
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StreamGT-Registrarse</title>
+</head>
+<body>
+    <h2>Registrarse</h2>
+    <div>
+        <form method="post" style="margin: 5% 0 0">
+            <div>
+                <p>Nombre</p>
+                <input type="text" style="margin: 1px 0 2px" name="nombrein" /><br />
+                <p>Apellido</p>
+                <input type="text" style="margin: 1px 0 2px" name="apellidoin" /><br />
+                <p>Edad</p>
+                <input type="number" style="margin: 1px 0 2px" name="edadin" /><br />
+                <p>Username</p>
+                <input type="text" style="margin: 1px 0 2px" name="usernamein" /><br />
+                <p>Password</p>
+                <input type="password" style="margin: 1px 0 2px" name="passwordin" /><br />
+                <p>Confirmar Password</p>
+                <input type="password" style="margin: 1px 0 2px" name="confipasswordin" /><br />
+            </div>
+            <div class="float-right">
+                <input type="submit" value="Save" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
