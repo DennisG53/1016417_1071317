@@ -8,6 +8,9 @@ namespace Proyecto_MVC.Models
 {
     public class CuentaUsuario
     {
+        [Key]
+        public int UserID { get; set; }
+
         [Required(ErrorMessage = "Por favor, ingrese su nombre.")]
         public string Nombre { get; set; }
 
@@ -21,9 +24,11 @@ namespace Proyecto_MVC.Models
         public int Edad { get; set; }
 
         [Required(ErrorMessage = "Por favor, seleccione una contraseña.")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Verifique su contraseña.")]
+        [Compare("Password", ErrorMessage = "Verifique su contraseña.")]
+        [DataType(DataType.Password)]
         public string ConfirmarPassword { get; set; }
     }
 }

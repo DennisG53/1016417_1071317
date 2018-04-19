@@ -9,10 +9,19 @@ namespace Proyecto_MVC.Controllers
 {
     public class CuentaUsuarioController : Controller
     {
+        List<CuentaUsuario> ListaUsuariosGuardados;
+
+        public CuentaUsuarioController()
+        {
+            ListaUsuariosGuardados = new List<CuentaUsuario>();
+        }
         // GET: CuentaUsuario
         public ActionResult Index()
         {
-            return View();
+            using (MyDbContext db = new MyDbContext())
+            {
+                return View(db.cuentaUsuario.ToList());
+            }
         }
 
         public ActionResult RegistrarUser()
@@ -25,10 +34,12 @@ namespace Proyecto_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                //Agregar a la lista
-
-                //Waiting
-
+                using (MyDbContext db = new MyDbContext())
+                {
+                    db.cuentaUsuario.Add(cuenta);
+                    db.SaveChanges();
+                    ListaUsuariosGuardados.Add(cuenta);
+                }
                 ModelState.Clear();
                 ViewBag.Message = cuenta.Username + " registrado correctamente.";
             }
@@ -41,11 +52,36 @@ namespace Proyecto_MVC.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public ActionResult Login(CuentaUsuario user)
-        //{
+        [HttpPost]
+        public ActionResult Login(CuentaUsuario user)
+        {
+            using (MyDbContext db = new MyDbContext())
+            {
+                var ausrr = db.cuentaUsuario.Where(u => u.Username == user.Username && u.Password == user.Password).FirstOrDefault();
+                if (ausrr != null)
+                {
+                    Session["UserId"] = ausrr.UserID.ToString();
+                    Session["Username"] = ausrr.Username.ToString();
+                    return RedirectToAction("Logeado");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Nombre de Usuario o Contraseña incorrecta.");
+                }
+            }
+            return View();
+        }
 
-        //}
-
+        public ActionResult Logeado()
+        {
+            if (Session["UserID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+        }
     }
 }
