@@ -55,7 +55,6 @@ namespace Laboratorio1.Controllers
                             nuevoJugador.Compensacion = double.Parse(row[csvTable.Columns[5]].ToString());
                             Lista.InsertarFinal(nuevoJugador);
                         }
-                        Lista.EliminarFinal();
                         return View(csvTable);
                     }
                     else
